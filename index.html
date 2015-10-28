@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any
+         other head content must come *after* these tags -->
+    <title>Hickeypad</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Hickeypad</h1>
+
+          <p>Don't you wish you had a soundpad with the best,
+            full-of-wisdom quotes
+            by <a href="http://www.infoq.com/author/Rich-Hickey">Rich
+              Hickey</a>? Of course you do! Here you are:</p>
+
+                    <button class="btn btn-default btn-sound"
+                  onclick="document.getElementById('what-happened').play()">
+            &ldquo;What Happened? What Happened?&rdquo;
+            <span class="quote-context"><a href="https://www.youtube.com/watch?v=VSdnJDO-xdg#t=49m59s">context</a></span>
+          </button>
+          <audio id="what-happened">
+            <source src="audio/what-happened.mp3" type="audio/mp3" />
+            <source src="audio/what-happened.ogg" type="audio/ogg" />
+          </audio>
+
+                    <button class="btn btn-default btn-sound"
+                  onclick="document.getElementById('misconception').play()">
+            &ldquo;Problems of misconception&rdquo;
+            <span class="quote-context"><a href="https://www.youtube.com/watch?v=f84n5oFoZBc#t=3m">context</a></span>
+          </button>
+          <audio id="misconception">
+            <source src="audio/misconception.mp3" type="audio/mp3" />
+            <source src="audio/misconception.ogg" type="audio/ogg" />
+          </audio>
+
+        </div> <!-- .col-md-12 -->
+      </div> <!-- .row -->
+    </div> <!-- .container-fluid -->
+  </body>
+</html>
