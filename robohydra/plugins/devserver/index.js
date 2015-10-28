@@ -56,17 +56,10 @@ exports.getBodyParts = function(conf) {
     return {
         heads: [
             new RoboHydraHeadFilter({
-                // detached: true,
-                name: 'appache-disabler',
-                path: '.*\.appcache',
+                name: 'appcache-disabler',
+                path: '/',
                 filter: function(body) {
-                    var manifestFiles = extractFilesFromManifest(body),
-                        message = "# Added by RoboHydra to disable" +
-                            " AppCache: " + mostRecentEdit(documentRoot,
-                                                           manifestFiles);
-
-                    return body.toString().replace("CACHE MANIFEST",
-                                                   "CACHE MANIFEST\n" + message);
+                    return body.toString().replace(/ manifest="[^"]*"/, "");
                 }
             }),
 
