@@ -1,0 +1,9 @@
+          <button class="btn btn-default btn-sound"
+                  onclick="document.getElementById('<%= id %>').play()">
+            &ldquo;<%= title %>&rdquo;
+            <span class="quote-context"><a href="<%= context_url %>">context</a></span>
+          </button>
+          <audio id="<%= id %>">
+            <source src="audio/<%= id %>.mp3" type="audio/mp3" />
+            <source src="audio/<%= id %>.ogg" type="audio/ogg" />
+          </audio>
