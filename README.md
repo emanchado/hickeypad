@@ -2,7 +2,9 @@ Hickeypad
 =========
 
 This is a soundpad with Rich Hickey (of [Clojure](http://clojure.org/)
-fame) quotes/soundbites.
+fame) quotes/soundbites. You can try it out here:
+
+   https://emanchado.github.io/hickeypad
 
 It was built mostly as a joke (and the need to easily access a sound
 clip of Rich saying "What happened? What happened?"), but also to
